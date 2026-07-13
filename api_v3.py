@@ -70,8 +70,8 @@ async def api_key_middleware(request: Request, call_next):
 
 @APP.on_event("startup")
 def init_models():
-    # if not API_KEY:
-    #     raise RuntimeError("API_KEY is not set. Set environment variable API_KEY before starting the server.")
+    if not API_KEY:
+        raise RuntimeError("API_KEY is not set. Set environment variable API_KEY before starting the server.")
     global tts_config, tts_pipeline
     tts_config = TTS_Config(config_path)
     print(tts_config)
