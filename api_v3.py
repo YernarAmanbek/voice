@@ -498,7 +498,7 @@ if __name__ == "__main__":
     try:
         if host == "None":  # 在调用时使用 -a None 参数，可以让api监听双栈
             host = None
-        uvicorn.run(app="api_v2:APP", host=host, port=port, workers=workers)
+        uvicorn.run(app="api_v3:APP", host=host, port=port, workers=workers)
     except Exception:
         traceback.print_exc()
         os.kill(os.getpid(), signal.SIGTERM)
