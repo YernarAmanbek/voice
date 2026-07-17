@@ -30,7 +30,7 @@ cut_method_names = get_cut_method_names()
 
 parser = argparse.ArgumentParser(description="GPT-SoVITS api")
 parser.add_argument("-c", "--tts_config", type=str, default="GPT_SoVITS/configs/tts_infer.yaml", help="tts_infer路径")
-parser.add_argument("-a", "--bind_addr", type=str, default="127.0.0.1", help="default: 127.0.0.1")
+parser.add_argument("-a", "--bind_addr", type=str, default="0.0.0.0", help="default: 0.0.0.0")
 parser.add_argument("-p", "--port", type=int, default="8000", help="default: 8000")
 parser.add_argument("-w", "--workers", type=int, default=3, help="default: 3")
 args = parser.parse_args()
