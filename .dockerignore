@@ -1,0 +1,44 @@
+.git
+.github
+.vscode
+.idea
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+
+# Docs, installers, development outputs
+Docker/
+docs/
+*.ipynb
+*.log
+logs*/
+output*/
+TEMP/
+
+# Clear non-inference source trees
+GPT_SoVITS/prepare_datasets/
+tools/asr/
+tools/uvr5/
+
+# Weights/assets live on the RunPod network volume.
+GPT_weights*/
+SoVITS_weights*/
+GPT_SoVITS/pretrained_models/
+GPT_SoVITS/text/G2PWModel/
+tools/AP_BWE_main/24kto48k/
+**/*.ckpt
+**/*.pth
+**/*.pt
+**/*.onnx
+**/*.safetensors
+**/*.zip
+
+# Reference audio lives on the volume.
+**/*.wav
+**/*.flac
+**/*.mp3
+**/*.m4a
+
+**/*.before-v2proplus-lazy
