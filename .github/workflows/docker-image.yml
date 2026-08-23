@@ -13,6 +13,7 @@ jobs:
       run: docker build . -t cheesesandwichwq/voice:latest
     - name: push image to docker hub
       run: |
+        docker login -u cheesesandwichwq -p ${{ secrets.cheesesandwichwq }}
         docker push cheesesandwichwq/voice:latest
     
 
