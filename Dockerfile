@@ -79,6 +79,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && python -m pip install --no-deps --index-url https://download.pytorch.org/whl/cu128 torchaudio==2.7.0 \
     && python -m pip install -r /tmp/requirements.txt \
     && python -c "import torch, torchaudio; assert torch.__version__.startswith('2.7.0'); assert torchaudio.__version__.startswith('2.7.0'); print(torch.__version__, torchaudio.__version__)" \
+    && python -m nltk.downloader -d /usr/local/share/nltk_data \
+         averaged_perceptron_tagger_eng cmudict \
     && apt-get purge -y --auto-remove \
          build-essential cmake ninja-build pkg-config libmecab-dev \
     && rm -rf /var/lib/apt/lists/* /root/.cache /tmp/*
@@ -89,5 +91,5 @@ RUN chmod +x /app/entrypoint.sh \
     && python -m py_compile /app/server.py
 
 EXPOSE 8000
-# ENTRYPOINT ["/app/entrypoint.sh"]
-RUN python /app/server.py
+ENTRYPOINT ["/app/entrypoint.sh"]
+# RUN python /app/server.py
