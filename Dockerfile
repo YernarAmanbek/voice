@@ -89,4 +89,5 @@ RUN chmod +x /app/entrypoint.sh \
     && python -m py_compile /app/server.py
 
 EXPOSE 8000
-ENTRYPOINT ["/app/entrypoint.sh"]
+# ENTRYPOINT ["/app/entrypoint.sh"]
+RUN python /app/server.py
