@@ -1,0 +1,20 @@
+name: Build and publish docker
+
+on:
+  [workflow_dispatch]
+
+jobs:
+  publish_images:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: build image
+      run: docker build . -t cheesesandwichwq/voice:latest
+    - name: push image to docker hub
+      run: |
+        docker push cheesesandwichwq/voice:latest
+    
+
+
+    
