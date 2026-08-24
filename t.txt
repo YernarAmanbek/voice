@@ -1,14 +1,10 @@
-
-25.08.2026, 00:49:54
+INFO:     Started server process [50]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-2026-08-24 15:49:59,279 ERROR gpt-sovits-stream: Model initialization failed:
-Traceback (most recent call last):
-  File "/app/server.py", line 180, in load_models
-    voice = load_voice_manifest(volume_root, allowed_languages)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/app/server.py", line 117, in load_voice_manifest
-    manifest_path = resolve_under(
-                    ^^^^^^^^^^^^^^
-  File "/app/server.py", line 77, in resolve_under
-    raise FileNotFoundError(f"Required file not found: {path}")
-FileNotFoundError: Required file not found: /references/speaker-a/default.json
+2026-08-24 16:01:02,382 INFO gpt-sovits-stream: Loading GPT-SoVITS v2ProPlus from /runpod-volume/pretrained_models
+Loading Text2Semantic weights from /runpod-volume/pretrained_models/s1v3.ckpt
+Loading VITS weights from /runpod-volume/pretrained_models/v2Pro/s2Gv2ProPlus.pth. <All keys matched successfully>
+Loading BERT weights from /runpod-volume/pretrained_models/chinese-roberta-wwm-ext-large
+Loading CNHuBERT weights from /runpod-volume/pretrained_models/chinese-hubert-base
+2026-08-24 16:01:17,249 INFO gpt-sovits-stream: Ready: mono s16le PCM at 32000 Hz; allowed languages=en
