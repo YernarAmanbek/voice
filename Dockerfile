@@ -87,8 +87,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY --from=source-prune /src /app
 
+# Resolve the complete inference import graph while the image is still building.
 RUN chmod +x /app/entrypoint.sh \
-    && python -m py_compile /app/server.py
+    && python -m py_compile /app/server.py \
+    && python -c "from GPT_SoVITS.TTS_infer_pack.TTS import TTS; print('GPT-SoVITS import ok')"
 
 EXPOSE 8000
 ENTRYPOINT ["/app/entrypoint.sh"]
