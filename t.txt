@@ -1,0 +1,51 @@
+```
+INFO:     Started server process [50]
+```
+
+```
+INFO:     Waiting for application startup.
+```
+
+```
+INFO:     Application startup complete.
+```
+
+```
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+```
+
+```
+2026-08-24 14:58:52,145 ERROR gpt-sovits-stream: Model initialization failed:
+```
+
+```
+Traceback (most recent call last):
+```
+
+```
+  File "/app/server.py", line 151, in load_models
+```
+
+```
+    from GPT_SoVITS.TTS_infer_pack.TTS import TTS
+```
+
+```
+  File "/app/GPT_SoVITS/TTS_infer_pack/__init__.py", line 1, in <module>
+```
+
+```
+    from . import TTS, text_segmentation_method
+```
+
+```
+  File "/app/GPT_SoVITS/TTS_infer_pack/TTS.py", line 24, in <module>
+```
+
+```
+    from AR.models.t2s_lightning_module import Text2SemanticLightningModule
+```
+
+```
+  File "/app/GPT_SoVITS/AR/models/t2s_lightning_module.py", line 14, in <module>
+```
