@@ -1,5 +1,12 @@
-INFO:     Started server process [50]
+INFO:     Started server process [19]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-2026-08-24 15:32:21,384 ERROR gpt-sovits-stream: Model initialization failed:
+2026-08-24 15:35:39,275 ERROR gpt-sovits-stream: Model initialization failed:
+Traceback (most recent call last):
+  File "/app/server.py", line 159, in load_models
+    gpt_weight = resolve_under(
+                 ^^^^^^^^^^^^^^
+  File "/app/server.py", line 77, in resolve_under
+    raise FileNotFoundError(f"Required file not found: {path}")
+FileNotFoundError: Required file not found: /runpod-volume/pretrained_models/gpt/v2proplus.ckpt
