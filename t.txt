@@ -1,10 +1,12 @@
-INFO:     Started server process [50]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-2026-08-24 16:01:02,382 INFO gpt-sovits-stream: Loading GPT-SoVITS v2ProPlus from /runpod-volume/pretrained_models
-Loading Text2Semantic weights from /runpod-volume/pretrained_models/s1v3.ckpt
-Loading VITS weights from /runpod-volume/pretrained_models/v2Pro/s2Gv2ProPlus.pth. <All keys matched successfully>
+
 Loading BERT weights from /runpod-volume/pretrained_models/chinese-roberta-wwm-ext-large
 Loading CNHuBERT weights from /runpod-volume/pretrained_models/chinese-hubert-base
-2026-08-24 16:01:17,249 INFO gpt-sovits-stream: Ready: mono s16le PCM at 32000 Hz; allowed languages=en
+INFO:     100.64.0.77:42450 - "GET /ping HTTP/1.1" 204 No Content
+INFO:     100.64.0.77:42450 - "GET /ping HTTP/1.1" 204 No Content
+INFO:     100.64.0.77:42450 - "GET /ping HTTP/1.1" 204 No Content
+INFO:     100.64.0.77:42450 - "GET /ping HTTP/1.1" 204 No Content
+INFO:     100.64.0.77:42450 - "GET /ping HTTP/1.1" 204 No Content
+2026-08-27 14:57:27,824 INFO gpt-sovits-stream: Ready: mono s16le PCM at 32000 Hz; allowed languages=en
+INFO:     100.64.0.77:42450 - "GET /ping HTTP/1.1" 200 OK
+INFO:     100.64.0.76:36536 - "POST /tts HTTP/1.1" 422 Unprocessable Entity
+INFO:     100.64.0.77:48160 - "GET /ping HTTP/1.1" 200 OK
