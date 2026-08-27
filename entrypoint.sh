@@ -47,6 +47,8 @@ exec python -m uvicorn server:app \
   --host 0.0.0.0 \
   --port "${PORT:-8000}" \
   --workers 1 \
-  --no-access-log \
   --proxy-headers \
   --timeout-keep-alive 5
+
+#   # --no-access-log \ was removed from server uvicorn on launch
+# turn on again after debugging
