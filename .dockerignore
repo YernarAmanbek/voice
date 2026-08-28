@@ -22,7 +22,9 @@ GPT_SoVITS/prepare_datasets/
 tools/asr/
 tools/uvr5/
 
-# Weights/assets live on the RunPod network volume.
+# Local weight artifacts stay out of the build context; the Dockerfile fetches
+# the pinned inference snapshot directly into the runtime image.
+/models/
 GPT_weights*/
 SoVITS_weights*/
 GPT_SoVITS/pretrained_models/
